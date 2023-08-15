@@ -1,16 +1,22 @@
 # macroecon
 
-Macrocorr is a Python package for analyzing the correlation between macroeconomic indicators and time-series data
+Macrocorr (’macroeconomic correlation’) is a Python package for analyzing the correlation between macroeconomic indicators and time-series data. 
+
+This package is designed to analyze and compare the correlations with multiple macroeconomic indicators at a single time. The result is intended to provide an overview of macroeconomic relationships. It should not be used for profitable purposes. 
+
+The data of the macroeconomic indicators are extracted from [WorldBank](https://databank.worldbank.org/) and [YahooFinance](https://finance.yahoo.com/lookup?s=DATA) historical database. This package doesn’t guarantee the accuracy of the correlated data.
 
 ## Installation
 
-The latest stable release (and required dependencies) can be installed from [pip](https://pip.pypa.io/en/stable/).
+The latest stable release (and required dependencies) can be installed from [pip](https://pypi.org/project/macrocorr/).
 
 ```bash
-pip install macroecon
+pip install macrocorr
 ```
 
-## Usage
+## Quick Start
+
+### 
 
 ```python
 import foobar
@@ -27,10 +33,11 @@ foobar.singularize('phenomena')
 
 ## Contributing
 
-Development takes place on Github: https://github.com/SeoliKim/macrocorr
+Development takes place on [Github](https://github.com/SeoliKim/macrocorr)
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.s
+Pull requests are welcome. Feel free to add more macroeconomic indicators or analysis methods.
+
+For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
