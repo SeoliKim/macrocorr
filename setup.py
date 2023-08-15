@@ -12,7 +12,7 @@ setup(
     description = 'a Python package for analyzing the correlation between macroeconomic indicators and time-series data',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
-    url = "https://github.com/SeoliKim/macroecon",
+    url = "https://github.com/SeoliKim/macrocorr",
     download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    
     keywords = ['economics', 'correlation', 'time-series'],
     license = "MIT",
