@@ -6,7 +6,7 @@ with open('README.md') as f:
 
 setup(
     name = 'macrocorr',
-    version = '0.0.1',
+    version = '0.0.2',
     author = 'Seoli Kim',
     author_email = 'seolikim1225@gmail.com',
     description = 'a Python package for analyzing the correlation between macroeconomic indicators and time-series data',
