@@ -1,4 +1,4 @@
-from macroecon import correlator
+from macrocorr import correlator
 import pandas as pd
 
 

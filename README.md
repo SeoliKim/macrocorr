@@ -2,7 +2,9 @@
 
 Macrocorr (’macroeconomic correlation’) is a Python package for analyzing the correlation between macroeconomic indicators and time-series data. 
 
-This package is designed to analyze and compare the correlations with multiple macroeconomic indicators at a single time. The result is intended to provide an overview of macroeconomic relationships. It should not be used for profitable purposes. 
+*Pearson's correlation* is used to analyze the correlation. This package uses [SciPy](https://scipy.org/)’s built function to get the Pearson coefficient. For details, please check out **[scipy.stats.pearsonr](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html).** 
+
+This package is designed to provide the easy process of analyzing and comparing the correlations with multiple macroeconomic indicators at a single time. The result is intended to provide an overview of macroeconomic relationships. It should not be used for profitable purposes.
 
 The data of the macroeconomic indicators are extracted from [WorldBank](https://databank.worldbank.org/) and [YahooFinance](https://finance.yahoo.com/lookup?s=DATA) historical database. This package doesn’t guarantee the accuracy of the correlated data.
 
