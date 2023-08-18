@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import re
-from statsmodels.tsa.stattools import adfuller
 
 class utils:
     def filter_string(s:str):
@@ -72,14 +71,6 @@ class utils:
             return True
 
     def stationary_df(df: pd.DataFrame):
-        values=df[df.columns[0]]
-        adf_result=adfuller(df)
-        cnt=0
-        while cnt<2 and utils.check_non_stationarity(adf_result):
-            values=np.log(values)
-            adf_result=adfuller(values)
-            cnt+=1
-        df[df.columns[0]]=values
         return df
         
     
