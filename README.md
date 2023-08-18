@@ -16,8 +16,12 @@ The latest stable release (and required dependencies) can be installed from [pip
 pip install macrocorr
 ```
 
-## Quick Start
+## Usage
+- For all macroeconomic indicators and all major categories, check out [CATALOG](https://github.com/SeoliKim/macrocorr/blob/main/Usage/CATALOG.md).
+- For more detailed uses of the functions, check out [FUNCTIONS](https://github.com/SeoliKim/macrocorr/blob/main/Usage/FUNCTIONS.md).
+- For a step-by-step example use-case, check out [example_basic.ipynb](https://github.com/SeoliKim/macrocorr/blob/main/Usage/example/example_basic.ipynb).
 
+#### Quick Start
 
 1. Import “correlator” from Macrocorr
 
