@@ -18,20 +18,38 @@ pip install macrocorr
 
 ## Quick Start
 
-### 
+
+1. Import “correlator” from Macrocorr
 
 ```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+from macrocorr import correlator
 ```
+
+2. Create a correlator with the data you want to analyze
+
+```python
+my_correlator= correlator(date=my_data['Date'].values, data_x=my_data['Price'].values)
+# data_x should be an one-dimensional array of numerical value
+# make sure the values from date and data_x are matched
+```
+
+3. Analyze and compare the correlation with the macroeconomic indicators from a category
+
+```python
+my_correlator.analyze_Correlation(category='population', country='USA', top_num=3)
+# print the top 3 most correlated indicators from the category (='population') 
+# with their respective Pearson's coefficient and p-value
+# plot the graph with both the input data and data of the most correlated indicator
+```
+
+4. Analyze the correlation with one specific indicator
+
+```python
+my_correlator.get_Correlation(y_name="Population, total", graph=True)
+# print the Pearson's coefficient and p-value of the indicator (='Population, total') 
+# plot the graph with both the input data and data of the indicator
+```
+</br>
 
 ## Contributing
 
