@@ -15,7 +15,7 @@ setup(
     url = "https://github.com/SeoliKim/macrocorr",  
     keywords = ['economics', 'correlation', 'time-series'],
     license = "MIT",
-    packages=find_packages('macrocorr', exclude=['test']),
+    package_dir = {"macrocorr": "src"},
     setup_requires=['wheel'],
     install_requires=["numpy>=1.23.5", 
                       "pandas>=1.5.2", 
