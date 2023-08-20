@@ -9,8 +9,8 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 from scipy import stats
 
-from macroIndicator import *
-from utils import *
+from macrocorr.macroIndicator import *
+from macrocorr.utils import *
 
 
 class correlator:

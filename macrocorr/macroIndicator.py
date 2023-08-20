@@ -1,4 +1,4 @@
-from utils import *
+from macrocorr.utils import *
 from collections import defaultdict
 
 class macroIndicator:

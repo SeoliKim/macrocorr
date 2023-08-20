@@ -31,7 +31,7 @@ class utils:
     
     def toDateTime(datedata):
         try:
-            date=pd.to_datetime(datedata, infer_datetime_format=True)
+            date=pd.to_datetime(datedata,  format='mixed')
             input_frequency= pd.infer_freq(date)
             date.freq= input_frequency
             return date
@@ -40,7 +40,7 @@ class utils:
             for i in datedata:
                 s=re.sub("[^0123456789\.:']","",i)
                 date.append(s)
-            date=pd.to_datetime(date,infer_datetime_format=True)
+            date=pd.to_datetime(date, format='mixed')
             input_frequency= pd.infer_freq(date)
             date.freq= input_frequency
             return date

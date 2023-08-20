@@ -1,3 +1,3 @@
-from correlator import *
-from macroIndicator import *
-from utils import *
+from macrocorr.correlator import *
+from macrocorr.macroIndicator import *
+from macrocorr.utils import *
