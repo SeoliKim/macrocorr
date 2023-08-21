@@ -9,11 +9,12 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 from scipy import stats
 
-from macrocorr.macroIndicator import *
-from macrocorr.utils import *
+
+from .macroIndicator import *
+from .utils import *
 
 
-class correlator:
+class Correlator:
     
     # create one correlator object for each set of input data x
     def __init__(self, data_x=None, date=None, start_date=None, end_date=None):
@@ -96,7 +97,7 @@ class correlator:
     def get_data_web(self, y_name:str, country='USA'):
         # retrive data from internet
         y_name_uniform=utils.filter_string(y_name)
-        src= macroIndicator.mi_dict[y_name_uniform]
+        src= MacroIndicator.mi_dict[y_name_uniform]
         provider= src[1]
         if provider==0:
             df_y= self.get_data_y_YahooFinance(src[0], self.date[0], self.date[-1])
@@ -166,8 +167,8 @@ class correlator:
     def analyze_Correlation(self, category='population', country='USA', top_num=3):
         category_name=utils.filter_string(category)
         res={}
-        for indicator in macroIndicator.categories[category_name]:
-            res[macroIndicator.mi_dict[indicator][-1]]=self.get_Correlation_system(indicator,country=country)
+        for indicator in MacroIndicator.categories[category_name]:
+            res[MacroIndicator.mi_dict[indicator][-1]]=self.get_Correlation_system(indicator,country=country)
 
         high= sorted(res, key=lambda dict_key: abs(res[dict_key][0]), reverse=True)[:top_num]
         # Finding 3 highest values
@@ -175,7 +176,7 @@ class correlator:
         for h in high:
             high_crrs[h]=res[h]
         
-        response=f'The {h} most correlated macro-indicators with the input data: '
+        response=f'The {top_num} most correlated macro-indicators with the input data: '
         for indicator, statistics in high_crrs.items():
             response+= '\n'
             response+= f'{indicator}: Pearson coefficient of {statistics[0]} with p-value of {statistics[1]}.'

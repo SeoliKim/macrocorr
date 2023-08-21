@@ -1,7 +1,7 @@
-from macrocorr.utils import *
+from .utils import *
 from collections import defaultdict
 
-class macroIndicator:
+class MacroIndicator:
 
     """
     #0: API name

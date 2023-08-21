@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 with open('README.md',encoding='utf-8') as f:
     long_description = f.read()
@@ -6,7 +6,7 @@ with open('README.md',encoding='utf-8') as f:
 
 setup(
     name = 'macrocorr',
-    version = '0.0.3',
+    version = '0.1.0',
     author = 'Seoli Kim',
     author_email = 'seolikim1225@gmail.com',
     description = 'a Python package for analyzing the correlation between macroeconomic indicators and time-series data',
