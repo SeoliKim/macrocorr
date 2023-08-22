@@ -1,6 +1,48 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
+requires = ["setuptools>=43.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "macrocorr" 
+version = "0.1.6" 
+description = "a Python package for analyzing the correlation between macroeconomic indicators and time-series data" 
+readme = "README.md" 
+requires-python = ">=3.7"
+keywords = ['economics', 'correlation', 'time-series']
+license = {file = "LICENSE.txt"}
+authors = [
+  {name = "Seoli Kim", email = "seolikim1225@gmail.com" } 
+]
+
+classifiers = [  
+  "Development Status :: 3 - Alpha",
+  'Intended Audience :: Science/Research',      
+  'Topic :: Office/Business :: Financial',
+  'Natural Language :: English',
+  'License :: OSI Approved :: MIT License',  
+  'Programming Language :: Python :: 3',   
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [ 
+  "numpy>=1.23.5", 
+  "pandas>=1.5.2", 
+  "matplotlib>=3.7.2", 
+  "scipy>=1.11.1", 
+  "yfinance>=0.2.26",
+  "wbgapi>=1.0.12",
+  "wheel"
+]
+
+[project.urls]  # Optional
+"Homepage" = "https://github.com/SeoliKim/macrocorr"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/macrocorr"]
+
