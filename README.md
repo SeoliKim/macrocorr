@@ -1,4 +1,4 @@
-# macroecon
+# macrocorr
 
 Macrocorr (’macroeconomic correlation’) is a Python package for analyzing the correlation between macroeconomic indicators and time-series data. 
 
